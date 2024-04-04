@@ -17,8 +17,8 @@ int main()
     char buff[100];
     COMPLEX csi_matrix[3][3][114]={0};
     COMPLEX x;
-    x.real=1;
-    x.imag=2;
+    x.real=2;
+    x.imag=3;
 
     // while(1)
     // {
@@ -29,7 +29,7 @@ int main()
     // }
     
     fd = open(myfifo, O_WRONLY);
-        write(fd, (COMPLEX*)&x, sizeof(COMPLEX));
+        write(fd, csi_matrix, sizeof(csi_matrix));
         close(fd);
     return 0;
 
